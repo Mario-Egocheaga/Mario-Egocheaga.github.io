@@ -1,1 +1,6 @@
+name: Mario Egocheaga Website
+title: null
+plugins:
+- jemoji
+
 theme: jekyll-theme-minimal
