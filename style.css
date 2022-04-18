@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 :root {
-    --clr-accent: #11a9c9;
-    --light: #9dd4f1;
+    --clr-accent: #6d0505;
+    --light: #c20909;
     --dark: #000000;
     --white: #ffffff;
     --shadow: 0 1px 5px rgba(104,104,104, 0.8);
