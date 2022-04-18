@@ -11,9 +11,9 @@
             <h2>Mario Egocheaga</h2>
             <h3>AI Engineer/Game Designer/Programmer</h3>
             <p>Hello! I'm Mario Egocheaga, a game developer from NYC, I research AI development in Unity and Unreal, work well with teams who are passionate in their projects, and dabble in audio design/engineering and music composition.</p>
-            <a href="Projects.md">Projects</a>
-            <a href="Code.md">Code</a>
-            <a href="Sound.md">Sound</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Code.html">Code</a>
+            <a href="Sound.html">Sound</a>
         </div>
 
     </section>
