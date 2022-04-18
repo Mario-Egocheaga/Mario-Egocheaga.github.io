@@ -1,0 +1,110 @@
+﻿<!--- All code layout has been provided by Matthew Carmato & Matthew Merritt !-->
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="Paper.js"></script>
+    <title>Mario Egocheaga - Paper</title>
+    <link rel="stylesheet" href="pagestyle.css">
+
+    <script>
+
+        var index = 0;
+
+        var gameTitles = [
+            "Manhunt: How Rockstar justifies violence in videogames",
+            "Hotline Miami: Anti-Violence in a violent video game",
+        ]
+
+        var gameDescriptions = [
+            "A deeper look at Manhunt's gameplay mechanics, and their justification in game design.",
+            "A focus on the psychological aspects of the reward systems in Hotline Miami, with a opposite message in the game's narrative.",
+        ]
+
+        var gameDocs = [
+            "<object data='Game Analysis Draft.pdf' type='application/pdf' id='papers'><p>It looks like the PDF could not be viewed on your device. <a href='Game Analysis Draft.pdf'>You can view it here.</a></p></object>",
+            "<object data='Analysis of Game Values.pdf' type='application/pdf' id='papers'><p>It looks like the PDF could not be viewed on your device. <a href='Analysis of Game Values.pdf'>You can view it here.</a></p></object>",
+        ]
+
+        function replaceContent() {
+            title.innerHTML = gameTitles[index];
+            description.innerHTML = gameDescriptions[index];
+            gameDoc.innerHTML = gameDocs[index];
+
+            removePdf(gameDocs[index], "<p>It looks like the PDF could not be viewed on your device. <a href='Analysis of Game Values.pdf>You can view it here.</a></p>");
+        }
+
+        function changeContent(change) {
+            index += change;
+            if (index < 0) {
+                index = gameTitles.length - 1;
+            }
+            else if (index >= gameTitles.length) {
+                index = 0;
+            }
+            replaceContent();
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="navBar" style="box-shadow: 0 7px 10px rgba(0, 0, 0, 0.7);">
+
+        <a href="index.html" class="navHeader">Mario Egocheaga</a>
+
+        <div class="navButtons" style="margin-right: 2rem;">
+            <div class="navDropdown">
+                <div class="navDropdownButton">Menu</div>
+                <div class="navDropdownContent">
+                    <a href="Projects.html">Projects</a>
+                    <a href="Papers.html">Papers</a>
+                    <a href="Code.html">Code</a>
+                    <a href="Sound.html">Sound</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navBurgerDropdown">
+            <div class="navBurgerDropdownButton">&#9776;</div>
+            <div class="navDropdownContent">
+                <a href="Projects.html">Projects</a>
+                <a href="Papers.html">Papers</a>
+                <a href="Code.html">Code</a>
+                <a href="Sound.html">Sound</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="gamesContainer">
+        <div class="gamesLeft">
+            <div class="gamesTitle">
+                <div>Papers</div>
+            </div>
+            <div class="gameDocuments" id="gameDoc">
+                <object data='Game Analysis Draft.pdf' type='application/pdf' id='gameDocs'><p>It looks like the PDF could not be viewed on your device. <a href='Game Analysis Draft.pdf'>You can view it here.</a></p></object>
+            </div>
+            <script>removePdf(gameDocs[index], "<p>It looks like the PDF could not be viewed on your device. <a href='Game Analysis Draft.pdf'>You can view it here.</a></p>");</script>
+        </div>
+
+        <div class="gamesRight">
+            <div class="gamesNavigationHeader">
+                <a href="javascript:void(0);" style="font-size:150%;" class="switchButton" onclick="changeContent(-1)"><b>&lt;</b></a>
+                <p id="title" style=" font-size: large; border: solid; padding: 5px 10px;">Manhunt: How Rockstar justifies violence in videogames.</p>
+                <a href="javascript:void(0);" style="font-size:150%;" class="switchButton" onclick="changeContent(1)"><b>&gt;</b></a>
+            </div>
+
+            <div class="gameDescriptions">
+                <p id="description"> A deeper look at Manhunt's gameplay mechanics, and their justification in game design.</p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        Send me an email: <a href="mailto:work.mario.egocheagao@gmail.com">work.mario.egocheaga@gmail.com</a>
+    </footer>
+
+</body>
+</html>

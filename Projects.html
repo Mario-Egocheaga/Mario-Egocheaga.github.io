@@ -1,0 +1,127 @@
+﻿<!--- All code layout has been provided by Matthew Carmato !-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mario Egocheaga - Games</title>
+    <link href="pagestyle.css" rel="stylesheet">
+    <script>
+			var currentIndex = 0;
+
+			var gameTitles = [
+                "You're Not Here",
+                "Nyctophobia",
+                "Null/Void"
+			];
+
+			var gameQuotes = [
+				`"A psychological VR horror game inspired by Silent HIll."`,
+
+                `"A sound-centric VR psychological horror game. "`,
+
+                `"A narrative driven experience about a person trying to find solace."`
+			];
+
+			var gameDescriptions = [
+				` You're Not Here is a psychological VR horror expereience that let's the player control a young teenage girl that has just birthed a child. `,
+
+                `A first project for a VR curriculum made by Tyler Gorman, and Mario Egocheaga it focuses solely on sound and frequencies to horrify the player. `,
+
+                `A class project that was worked on for an entire semester. `
+			];
+
+			var gameLinks = [
+				"https://trello.com/b/Db6IyGb5/youre-not-here",
+                "https://trello.com/b/6SUaIbEW/group-project-2",
+                "https://trello.com/b/JwX6scBy/null-void"
+			];
+
+			var gameVideos = [
+                "https://www.youtube.com/embed/GPSDbVvmkoQ",
+                "https://www.youtube.com/embed/f4EQTIUUhlo",
+                "https://www.youtube.com/embed/vH0FlmyuXlg"
+			];
+
+			function changeGame(direction){
+				currentIndex += direction;
+
+				if(currentIndex > gameTitles.length - 1){
+					currentIndex = 0;
+				}
+				else if(currentIndex < 0){
+					currentIndex = gameTitles.length - 1;
+				}
+
+				gameTitle.innerHTML = gameTitles[currentIndex];
+				gameQuote.innerHTML = gameQuotes[currentIndex];
+				gameDescription.innerHTML = gameDescriptions[currentIndex];
+				gameLink.href = gameLinks[currentIndex];
+				gameVideo.src = gameVideos[currentIndex];
+			}
+
+
+    </script>
+</head>
+
+<body>
+    <div class="navBar" style="box-shadow: 0 7px 10px rgba(0, 0, 0, 0.7);">
+
+        <a href="index.html" class="navHeader">Mario Egocheaga</a>
+
+        <div class="navButtons" style="margin-right: 2rem;">
+            <div class="navDropdown">
+                <div class="navDropdownButton">Menu</div>
+                <div class="navDropdownContent">
+                    <a href="Projects.html">Projects</a>
+                    <a href="Papers.html">Papers</a>
+                    <a href="Code.html">Code</a>
+                    <a href="Sound.html">Sound</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navBurgerDropdown">
+            <div class="navBurgerDropdownButton">&#9776;</div>
+            <div class="navDropdownContent">
+                <a href="Projects.html">Projects</a>
+                <a href="Papers.html">Papers</a>
+                <a href="Code.html">Code</a>
+                <a href="Sound.html">Sound</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="gamesContainer">
+        <div class="gamesLeft">
+            <div class="gamesTitle">
+                <div>Portfolio</div>
+            </div>
+            <iframe id="gameVideo" class="gamesVideo" width="560" height="315" src="https://www.youtube.com/embed/GPSDbVvmkoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="gamesRight">
+            <div class="gamesNavigationHeader">
+                <a onclick="changeGame(-1)" href="javascript:void(0)" style="font-size: 150%;" class="switchButton"><b>&lt;</b></a>
+                <p id="gameTitle" href="" style=" border: solid; padding: 5px 10px;">You're Not Here</p>
+                <a onclick="changeGame(1)" href="javascript:void(0)" style="font-size: 150%;" class="switchButton"><b>&gt;</b></a>
+            </div>
+
+            <p id="gameQuote" style="font-style: italic; margin-top: 2rem;">
+                "A psychological VR horror game inspired by Silent HIll."
+            </p>
+
+            <p id="gameDescription">
+                You're Not Here is a psychological VR horror expereience that let's the player control a young teenage girl that has just birthed a child.
+            </p>
+
+            <a class="gamesLink" id="gameLink" target="_blank" href="https://trello.com/b/Db6IyGb5/youre-not-here">Check It Out</a>
+        </div>
+    </div>
+
+    <footer>
+        Send me an email: <a href="mailto:work.mario.egocheagao@gmail.com">work.mario.egocheaga@gmail.com</a>
+    </footer>
+
+</body>
+</html>
